@@ -1,20 +1,8 @@
 
 const fs = require('fs')
 const inquirer = require('inquirer');
+const generateReadme = require("../Utils/generateReadme")
 
-const generateReadme = (
-{
-projectTitle,
-description,
-installation,
-usage,
-contribution,
-tests,
-license,
-github,
-email
-}
-) 
 
 
 const init = () => {
@@ -23,7 +11,7 @@ inquirer
     {
         type: 'input',
         message: 'Enter Project Title:',
-        name: 'projectTitle',
+        name: 'title',
       },
     {
       type: 'input',
@@ -75,13 +63,27 @@ inquirer
         message: 'Enter your Email:',
         name: 'email',
       },
-    ])
-    .then((response) => {
-      const outputReadme = generateReadme(response);
-      console.log(outputReadme)
-      fs.writeFile('../../README.md'), outputHTML, (err) => {
-        err ? console.error(err) : console.log('Success!');
-    }});
-}
-  
+    ]).then((response) => {
+      fs.writeFile('generatedREADME.md', generateReadme(response), (err)=> {
+        if (err) {
+         console.log(err)
+       } else {
+         console.log(" Readme has been created ");
+     }});
+    })
+    // function writeToFile(response) {
+    //   fs.writeFile('generatedREADME', generateReadme(response), (err)=> {
+    //    if (err) {
+    //     console.log(err)
+    //   } else {
+    //     console.log(" Readme has been created ");
+    // }});
+    }
+    // function init() {
+    //   inquirer.prompt().then((response)=> {
+    //     console.log(generateReadme(response));
+
+    //     writeToFile("log.md", response);
+    //   })}
+    // }
   init();

@@ -1,9 +1,8 @@
-function generateReadme(response) {
-    return `#
-<h1>${response.title}</h1>
+#
+<h1>Readme </h1>
 
 ## Description
-${response.description}
+Creates Read me
 
 ## Table of Contents
 - [Title](#title)
@@ -17,35 +16,31 @@ ${response.description}
 - [Email](#email)
 
 ## Title
-${response.title}
+Readme 
 
 ## Description
-${response.description}
+Creates Read me
 
 ## Installation
-${response.installation}
+ad
 
 ## Usage
-${response.usage}
+ad
 
 ## Contribute
-${response.contribution}
+ad
 
 ## Tests
-${response.tests}
+ad
 
 ## License
-${response.license}
+MIT
 
 ## Github
-${response.github}
+SindidR
 
 ## Email
-${response.email}
+sindidreedh@gmail.com
 
 
 
-`;   
-}
-
-module.exports = generateReadme;
