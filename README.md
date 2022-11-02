@@ -1,7 +1,7 @@
 <h1>Readme Generator</h1>
 
 ## Description
-This Readme Generator produces a high quality readme based on the users needs and inputs out a readme that is formatted with a table of contents.
+This Readme Generator produces a high quality readme based on the users needs in which the user inputs their needs into the prompts given out by the terminal. Then it will pop out a readme that is formatted and comes with a table of contents.
 
 ## Table of Contents
 - [Title](#title)
